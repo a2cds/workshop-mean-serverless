@@ -22,7 +22,7 @@ export class FuncionarioService {
     };
     console.log(funcionario);
 
-    // ==> (POST - Url no Back-End): http://localhost:8000/api/funcionario
+    // ==> (POST - Url no Back-End): http://localhost:8000/api/funcionarios
     this
       .http
       .post(`${this.uri}/funcionarios`, funcionario)
@@ -43,7 +43,7 @@ export class FuncionarioService {
    * Método responsável por atualizar o 'Funcionario' pelo 'Id':
    */
   editFuncionario(id) {
-    // ==> (GET by Id- Url no Back-End): (GET): localhost:8000/api/funcionario/:id
+    // ==> (GET by Id- Url no Back-End): (GET): localhost:8000/api/funcionarios/:id
     return this
       .http
       .get(`${this.uri}/funcionarios/${id}`);
@@ -56,7 +56,7 @@ export class FuncionarioService {
       numeroIdentificador
     };
 
-    // ==> (PUT by Id - Url no Back-End): (UPDATE): localhost:8000/api/funcionario/:id
+    // ==> (PUT by Id - Url no Back-End): (UPDATE): localhost:8000/api/funcionarios/:id
     this
       .http
       .put(`${this.uri}/funcionarios/${id}`, funcionario)
@@ -67,7 +67,7 @@ export class FuncionarioService {
    * Método responsável por excluir um 'Funcionario' pelo 'Id':
    */
   excluirFuncionario(id) {
-    // ==> (DELETE by Id - Url no Back-End): (DELETE): localhost:8000/api/funcionario/:id
+    // ==> (DELETE by Id - Url no Back-End): (DELETE): localhost:8000/api/funcionarios/:id
     return this
       .http
       .delete(`${this.uri}/funcionarios/${id}`);

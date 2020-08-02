@@ -9,19 +9,19 @@
 const router = require('express-promise-router')();
 const funcionarioController = require('../controllers/funcionario.controller');
 
-// ==> Rota Criar Novo 'Funcionario': (POST): localhost:8000/api/funcionario/
+// ==> Rota Criar Novo 'Funcionario': (POST): localhost:8000/api/funcionarios/
 router.post('/funcionarios', funcionarioController.create);
 
 // ==> Rota Selecionar Todos 'Funcionarios': (GET): localhost:8000/api/funcionarios/
 router.get('/funcionarios', funcionarioController.findAll);
 
-// ==> Rota Selecionar 'Funcionario' pelo 'Id': (GET): localhost:8000/api/funcionario/:id
+// ==> Rota Selecionar 'Funcionario' pelo 'Id': (GET): localhost:8000/api/funcionarios/:id
 router.get('/funcionarios/:id', funcionarioController.findById);
 
-// ==> Rota Atualizar 'Funcionario' pelo 'Id': (UPDATE): localhost:8000/api/funcionario/:id
+// ==> Rota Atualizar 'Funcionario' pelo 'Id': (UPDATE): localhost:8000/api/funcionarios/:id
 router.put('/funcionarios/:id', funcionarioController.update);
 
-// ==> Rota Deletar 'Funcionario' pelo 'Id': (DELETE): localhost:8000/api/funcionario/:id
+// ==> Rota Deletar 'Funcionario' pelo 'Id': (DELETE): localhost:8000/api/funcionarios/:id
 router.delete('/funcionarios/:id', funcionarioController.delete);
 
 module.exports = router;
